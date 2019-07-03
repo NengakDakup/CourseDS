@@ -4,11 +4,12 @@ $host = "localhost";
 $user = "root";
 $password = "";
 $database = "course_description";
+mysqli_connect($host,$user,$password,$database);
 
-$con = mysqli_connect($host,$user,$password,$database);
- if ($con) {
- }
-
- else echo "error connecting";
+// Check connection
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
 
 ?>
